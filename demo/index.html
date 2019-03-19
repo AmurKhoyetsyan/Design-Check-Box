@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Check-Box-Demo</title>
+        <style type="text/css">
+            *{
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container{
+                width: 100%;
+                max-width: 1200px;
+                padding: 0 15px;
+                margin: 0 auto;
+                position: relative;
+            }
+
+            .py-2{
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .py-1{
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+            }
+
+            .row{
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .w-50{
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container py-2">
+            <form action="">
+                <div class="row">
+                    <div class="w-50">
+                        <h4>Default style</h4>
+                        <div class="py-1">
+                            <input type="checkbox" class="design-check-1" data-label="JavaScript" />
+                            <input type="checkbox" class="design-check-1" data-label="PHP" />
+                            <input type="checkbox" class="design-check-1" data-label="C++" />
+                            <input type="checkbox" class="design-check-1" data-label="C#" />
+                            <input type="checkbox" class="design-check-1" data-label="Java" />
+                        </div>
+                    </div>
+                    <div class="w-50">
+                        <h4>My style</h4>
+                        <div class="py-1">
+                            <input type="checkbox" class="design-check" data-label="JavaScript" />
+                            <input type="checkbox" class="design-check" data-label="PHP" />
+                            <input type="checkbox" class="design-check" data-label="C++" />
+                            <input type="checkbox" class="design-check" data-label="C#" />
+                            <input type="checkbox" class="design-check" data-label="Java" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="../dist/js/designcheckbox.js"></script>
+        <script type="text/javascript" src="js/function.js"></script>
+    </body>
+</html>
