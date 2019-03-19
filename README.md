@@ -17,7 +17,8 @@
 
     {
         checkboxPosition: 'left',
-        checkColor: '#A4A4A4',
+        checkMarkColor: '#A4A4A4',
+        boxBorderColor: '#A4A4A4',
         checkBackground: '#FFFFFF',
         label: true,
         labelColor: '#A4A4A4'
