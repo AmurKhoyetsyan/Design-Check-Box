@@ -4,18 +4,6 @@
  * https://github.com/AmurKhoyetsyan/Design-Check-Box
  */
 
-const setStyleArmCheckBox = () => {
-    let armCheckBoxStyle = document.createElement('style');
-    armCheckBoxStyle.setAttribute('type', 'text/css');
-    let head = document.querySelectorAll('head')[0] || document.head;
-
-    armCheckBoxStyle.innerText = ".arm-checkbox{display:none}.arm-checkbox-parent,.arm-checkbox-parent>.arm-checkbox-cubic-parent{display:-webkit-box;display:-ms-flexbox;display:flex}.arm-checkbox-parent{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}.arm-checkbox-parent>.arm-checkbox-cubic-parent>.arm-checkbox-cubic,.arm-checkbox-parent>.arm-checkbox-title-parent>.arm-checkbox-title{cursor:pointer;margin-bottom:0}.arm-checkbox-parent>.arm-checkbox-title-parent>.arm-checkbox-title{padding:0 5px;font-size:14px;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.arm-checkbox-parent>.arm-checkbox-cubic-parent>.arm-checkbox-cubic{border-style:solid;border-width:1px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;width:17px;height:17px;position:relative}.arm-checkbox-parent>.arm-checkbox-cubic-parent{-webkit-align-items:center;align-items:center}.arm-checkbox:checked~.arm-checkbox-parent>.arm-checkbox-cubic-parent>.arm-checkbox-cubic::before{content:'';width:6px;height:11px;left:4.4px;top:1px;border-style:solid;border-width:0 3px 3px 0;position:absolute;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}.arm-checkbox-parent,.arm-checkbox-parent>.arm-checkbox-cubic-parent,.arm-checkbox-parent>.arm-checkbox-cubic-parent>.arm-checkbox-cubic,.arm-checkbox-parent>.arm-checkbox-title-parent>.arm-checkbox-title,.arm-checkbox:checked~.arm-checkbox-parent>.arm-checkbox-cubic-parent>.arm-checkbox-cubic::before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}"
-
-    head.appendChild(armCheckBoxStyle);
-};
-
-setStyleArmCheckBox();
-
 class OtherFunctionsCheckBox{
     /**
      * replace All in String
@@ -53,7 +41,7 @@ class OtherFunctionsCheckBox{
     static setDesignCheckBox = (id, option) => {
         let style = document.createElement('style');
         style.setAttribute('type', 'text/css');
-        style.innerText = `.${id}{background-color: ${option.checkBackground};}.${id}{border-color: ${option.boxBorderColor};},.${id}::before{border-color: ${option.checkMarkColor};}`;
+        style.innerText = `.${id}{background-color: ${option.checkBackground};}.${id}{border-color: ${option.boxBorderColor};}.${id}::before{border-color: ${option.checkMarkColor};}`;
         return style;
     };
 }

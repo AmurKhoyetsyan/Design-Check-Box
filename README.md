@@ -27,9 +27,21 @@
 ## Example
 
 ### HTML
+#### add css
+
+    <link rel="stylesheet" type="text/css" href="css/designcheckbox.css" />
+        or
+    <link rel="stylesheet" type="text/css" href="css/designcheckbox.min.css" />
+
 #### data-label attribute for create label tag
 
     <input type="checkbox" class="YOUR-CLASS" data-label="JavaScript" />
+
+#### add javascript
+
+    <script type="text/javascript" src="../dist/js/designcheckbox.js"></script>
+        or
+    <script type="text/javascript" src="../dist/js/designcheckbox.min.js"></script>
 
 ### JavaScript
 
