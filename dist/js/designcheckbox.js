@@ -13,7 +13,7 @@ class OtherFunctionsCheckBox{
      * @returns {string}
      */
 
-    static replaceAll = (elem, search, replace) => {
+    static replaceAll(elem, search, replace){
         return elem.split(search).join(replace);
     };
 
@@ -23,7 +23,7 @@ class OtherFunctionsCheckBox{
      * @param newOption
      */
 
-    static expendOption = (option, newOption) => {
+    static expendOption(option, newOption){
         for(let key in option){
             if(newOption.hasOwnProperty(key)){
                 option[key] = newOption[key];
@@ -38,7 +38,7 @@ class OtherFunctionsCheckBox{
      * @returns {*}
      */
 
-    static setDesignCheckBox = (id, option) => {
+    static setDesignCheckBox(id, option){
         let style = document.createElement('style');
         style.setAttribute('type', 'text/css');
         style.innerText = `.${id}{background-color: ${option.checkBackground};}.${id}{border-color: ${option.boxBorderColor};}.${id}::before{border-color: ${option.checkMarkColor};}`;
@@ -72,7 +72,7 @@ class DesignCheckBox extends OtherFunctionsCheckBox{
      * @returns {Element}
      */
 
-    static createCheckBox = (id, option) => {
+    static createCheckBox(id, option){
         let getClassThis = `${id}_cub_style`;
         let style = this.setDesignCheckBox(getClassThis, option);
         let div = document.createElement('div');
@@ -94,7 +94,7 @@ class DesignCheckBox extends OtherFunctionsCheckBox{
      * @returns {Element}
      */
 
-    static createTitle = (elem, id, option) => {
+    static createTitle(elem, id, option){
         let title = document.createElement('label');
         let text = document.createTextNode((elem.getAttribute('data-label'))?(elem.getAttribute('data-label')):(''));
         let div = document.createElement('div');
@@ -115,7 +115,7 @@ class DesignCheckBox extends OtherFunctionsCheckBox{
      * @returns {Element}
      */
 
-    static chreateArmCheckBoxParent = (elem, id, option) => {
+    static chreateArmCheckBoxParent(elem, id, option){
         let check = this.createCheckBox(id, option);
         let title = (option.label)?(this.createTitle(elem, id, option)):('');
 
@@ -146,7 +146,7 @@ class DesignCheckBox extends OtherFunctionsCheckBox{
      * @param option
      */
 
-    static newDesign = (elem, index, option) => {
+    static newDesign(elem, index, option){
         let elClass = this.replaceAll(elem.classList.value, ' ', '');
         let id = `id_${elClass}_${index}_${Math.floor(Math.random() * 1000000)}`;
         if(elem.hasAttribute('id')){
@@ -175,7 +175,7 @@ class DesignCheckBox extends OtherFunctionsCheckBox{
      * @param option
      */
 
-    design = (option = {}) => {
+    design(option = {}){
         this.constructor.expendOption(this.defaultOption, option);
         if(this.elem){
             let len = this.elem.length;

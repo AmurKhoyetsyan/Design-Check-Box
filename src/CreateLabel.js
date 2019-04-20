@@ -4,13 +4,13 @@
  * https://github.com/AmurKhoyetsyan/Design-Check-Box
  */
 
-const createLabel = () => {
+function createLabel(){
     let label = document.createElement('label');
     let text = document.createTextNode("YOUR TEXT");
     let selector = document.querySelectorAll('YOUR SELECTOR')[0];
     label.setAttribute('for', 'YOUR ID');
     label.appendChild(text);
     selector.appendChild(label);
-};
+}
 
 createLabel();

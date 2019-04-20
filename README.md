@@ -45,12 +45,14 @@
 
 ### JavaScript
 
-    let input = document.querySelectorAll('.YOUR-CLASS');
-    new DesignCheckBox(input).design({
-        checkboxPosition: 'left',
-        checkMarkColor: '#000000',
-        boxBorderColor: '#000000',
-        checkBackground: '#8bd8ff',
-        label: true,
-        labelColor: '#000000'
-    });
+    window.onload = function(event){
+        let input = document.querySelectorAll('.YOUR-CLASS');
+        new DesignCheckBox(input).design({
+            checkboxPosition: 'left',
+            checkMarkColor: '#000000',
+            boxBorderColor: '#000000',
+            checkBackground: '#8bd8ff',
+            label: true,
+            labelColor: '#000000'
+        });
+    }
