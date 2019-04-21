@@ -30,20 +30,6 @@ class OtherFunctionsCheckBox{
             }
         }
     };
-
-    /**
-     * set design CheckBox
-     * @param id
-     * @param option
-     * @returns {*}
-     */
-
-    static setDesignCheckBox(id, option){
-        let style = document.createElement('style');
-        style.setAttribute('type', 'text/css');
-        style.innerText = `.${id}{background-color: ${option.checkBackground};}.${id}{border-color: ${option.boxBorderColor};}.${id}::before{border-color: ${option.checkMarkColor};}`;
-        return style;
-    };
 }
 
 class DesignCheckBox extends OtherFunctionsCheckBox{
@@ -74,14 +60,17 @@ class DesignCheckBox extends OtherFunctionsCheckBox{
 
     static createCheckBox(id, option){
         let getClassThis = `${id}_cub_style`;
-        let style = this.setDesignCheckBox(getClassThis, option);
         let div = document.createElement('div');
         div.classList.add('arm-checkbox-cubic-parent');
         let check = document.createElement('label');
         check.setAttribute('for', id);
         check.classList.add('arm-checkbox-cubic');
-        check.classList.add(getClassThis);
-        div.appendChild(style);
+        let checkMark = document.createElement('div');
+        checkMark.classList.add('arm-check-box-mark');
+        check.style.backgroundColor = option.checkBackground;
+        check.style.borderColor = option.boxBorderColor;
+        checkMark.style.borderColor = option.checkMarkColor;
+        check.appendChild(checkMark);
         div.appendChild(check);
         return div;
     };
